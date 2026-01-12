@@ -31,10 +31,21 @@ A high-performance Go proxy for Azure OpenAI and AWS Bedrock services, featuring
    - `AWS_REGION`: AWS Region (e.g., `us-east-1`).
    - `AWS_ACCESS_KEY_ID` / `AWS_SECRET_ACCESS_KEY`: AWS Credentials (or use `~/.aws/credentials`).
 
-3. **Run**
+3. **Run Locally**
    ```bash
    go run main.go
    ```
+
+## Docker
+
+You can run the entire stack (Proxy + MongoDB) using Docker Compose.
+
+1. **Configure .env** (as above)
+2. **Start Services**
+   ```bash
+   docker-compose up -d --build
+   ```
+   The server will be available at `http://localhost:8080`.
 
 ## Usage
 
